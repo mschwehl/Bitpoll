@@ -10,7 +10,7 @@ cffi==1.15.0              # via cryptography
 charset-normalizer==2.0.7  # via requests
 cryptography==35.0.0      # via django-encrypted-model-fields
 django-auth-ldap==3.0.0   # via -r requirements-production.in
-django-encrypted-model-fields==0.6.0  # via -r requirements.in
+django-encrypted-model-fields==0.6.1  # via -r requirements.in
 django-friendly-tag-loader==1.3.1  # via -r requirements.in
 django-markdown-app==0.9.7  # via -r requirements.in
 django-pipeline==2.0.6    # via -r requirements.in
