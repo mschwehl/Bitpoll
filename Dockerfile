@@ -12,9 +12,8 @@ WORKDIR /app
 COPY . .
 
 RUN pip install -r requirements-production.txt
-
-# for postgres
-# RUN pip install psycopg2
+RUN pip install psycopg2-binary
+RUN pip install psycopg2
 
 RUN mkdir _static && ln -s . _static/static
 RUN ln -s /data data
