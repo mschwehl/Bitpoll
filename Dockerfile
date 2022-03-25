@@ -1,7 +1,7 @@
 FROM python:3-buster
 
 RUN apt update \
-    && apt install -y --no-install-recommends uwsgi g++ make python3-psycopg2 python3-ldap3 gettext gcc python3-dev libldap2-dev libsasl2-dev  \
+    && apt install -y --no-install-recommends uwsgi g++ make  python3-ldap3 gettext gcc python3-dev libldap2-dev libsasl2-dev  \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -12,8 +12,8 @@ WORKDIR /app
 COPY . .
 
 RUN pip install -r requirements-production.txt
-RUN pip install psycopg2-binary
-RUN pip install psycopg2
+RUN pip install psycopg2-binary==2.8.6
+RUN pip install psycopg2==2.8.6
 
 RUN mkdir _static && ln -s . _static/static
 RUN ln -s /data data
