@@ -10,5 +10,5 @@ django-encrypted-model-fields
 caldav
 icalendar
 django-token-bucket>=0.2.2
-psycopg2
+psycopg2==2.8.6
 
